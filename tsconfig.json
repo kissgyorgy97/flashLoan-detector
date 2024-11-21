@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                       // Target JavaScript version
+    "module": "ESNext",                  // Use CommonJS modules
+    "rootDir": "./src",                    // Source directory
+    "outDir": "./dist",                    // Output directory
+    "strict": true,                        // Enable strict type-checking
+    "esModuleInterop": true,               // Enable interoperability for CommonJS
+    "skipLibCheck": true,                  // Skip type checking for libraries
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],                      // Include files in the src folder
+  "exclude": ["node_modules", "dist"]      // Exclude node_modules and dist folders
+}
