@@ -156,27 +156,19 @@ The Flash Loan Attack Detector is designed to identify suspicious transactions i
 
 ---
 
-## Design Considerations
+## Possible Next step
 
-1. **Efficiency**:
-   - By removing outliers and focusing on high-gas transactions, the detector reduces computational overhead.
-   - The filtering process ensures that only transactions with significant deviations are analyzed in-depth.
+1. **Decrease false positive results**:
+   - Currently analyzing 2000 block or ~ 300.000 transactions results in 8-15 false positive threat detection.
+   - This could be reduced by ~80% by taking into consideration token prices and applying a USD value threshold of the token involved in the suspicious transactions. Attacks usually aim for large profit and this would sort out low value but high interaction count transactions of swaps etc.
 
-2. **Robustness**:
-   - The detector is capable of identifying patterns commonly seen in flash loan exploits, including token inflows/outflows and circular transfers.
-   - The logic is extensible, allowing for future updates to include new attack patterns.
+2. **Better attacker alanysis**:
+   - The detector currently only checks for new or unused accounts as these usually present a threat ( especially with the value threshold implementation in place).
+   - This should be extended with a more robust analysis on the initator account to check of unusal behaviour.
 
-3. **Flexibility**:
-   - Users can provide any valid Ethereum block number as input.
-   - The API is compatible with both recent and historical Ethereum blocks, ensuring a wide range of use cases.
-
----
-
-## Limitations
-
-- **New Attack Patterns**: The detector relies on known patterns. Novel exploits may require updates to the detection logic.
-- **Performance on Large Blocks**: For blocks with a high number of transactions, analysis time may increase.
-- **Non-ERC-20 Attacks**: The logic currently focuses on ERC-20 token transfers and may not detect attacks involving non-ERC-20 assets.
+3. **Contract analysis**:
+   - The detector checks for ERC20 transfers as these occur on FlashLoans.This could be extended to verify known FlashLoan platform address interactions and function signatures.
+   - For an advanced analysis an interaction value comparison could be made to check if the volume of invovled transfers might manipulate current assets of a DeFi platfrom. 
 
 ---
 

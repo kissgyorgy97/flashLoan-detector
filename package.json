@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "dist/app.js",
   "scripts": {
-    "start": "node dist/app.js",           
-    "build": "tsc"                         
+    "start": "node dist/app.js",
+    "build": "tsc"
   },
   "type": "module",
   "author": "",
