@@ -152,7 +152,6 @@ The Flash Loan Attack Detector is designed to identify suspicious transactions i
   - **Transaction Hash**: The unique identifier for the transaction.
   - **Block Number**: The block containing the transaction.
   - **Involved Addresses**: The addresses and their respective roles in the suspicious activity.
-  - **ERC-20 Transfer Pairs**: Any detected circular token transfer pairs.
 
 ---
 
