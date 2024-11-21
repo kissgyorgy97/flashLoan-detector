@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import {blockAnalysisRouter} from "./routes/blockAnalysis.js";
+import {blockAnalysisRouter} from "./routes/blockAnalysis";
 
 
 const app = express();
@@ -16,3 +16,5 @@ app.use("/api/block", blockAnalysisRouter);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+export default app

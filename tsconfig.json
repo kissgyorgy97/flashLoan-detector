@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",                       // Target JavaScript version
-    "module": "ESNext",                  // Use CommonJS modules
+    "module": "NodeNext",                  // Use CommonJS modules
     "rootDir": "./src",                    // Source directory
     "outDir": "./dist",                    // Output directory
     "strict": true,                        // Enable strict type-checking
     "esModuleInterop": true,               // Enable interoperability for CommonJS
     "skipLibCheck": true,                  // Skip type checking for libraries
     "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true
   },

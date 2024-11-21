@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { scanBlocksForMaliciousFlashLoans } from "../utils/analyzeTrasnsactions.js";
+import { scanBlocksForMaliciousFlashLoans } from "../utils/analyzeTrasnsactions";
 
 export const blockAnalysisRouter = express.Router();
 

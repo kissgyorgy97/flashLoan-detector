@@ -42,6 +42,15 @@ Follow these steps to set up the project:
    ```bash
    npm run start
 
+## Testing
+
+### Running Tests
+To run the tests, use the following commands:
+
+1. **Run All Tests**:
+   ```bash
+   npm run test
+
 # Usage
 
 The API provides an endpoint to analyze Ethereum blocks for potential flash loan attacks.
