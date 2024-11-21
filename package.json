@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run build && node dist/app.js",
     "build": "tsc",
-    "test" : "npm run build && jest --watchAll  --detectOpenHandles --coverage"
+    "test" : "npm run build && jest --watchAll  --detectOpenHandles --coverage --forceExit"
   },
   "module": "module",
   "author": "",

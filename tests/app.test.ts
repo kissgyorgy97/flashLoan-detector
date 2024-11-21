@@ -20,8 +20,28 @@ describe("End-to-End Test: Flash Loan Detector", () => {
       expect(response.status).toBe(200);
       expect(response.body.blockNumber).toBe(blockNumber);
       expect(response.body.suspiciousTransactions.length).toBeGreaterThan(0);
-
+      expect(response.body.detectedSuspiciousActivity).toBe(true);
       console.log(`Test passed for ${description}`);
     }
+  });
+  it("should return false for clean blocks", async () => {
+    const blockNumber = 16817997
+    const response = await request(app)
+      .post("/api/block/analyze")
+      .send({blockNumber});
+
+      expect(response.status).toBe(200);
+      expect(response.body.blockNumber).toBe(blockNumber);
+      expect(response.body.detectedSuspiciousActivity).toBe(false);
+
+      console.log(`Test passed for clean block ${blockNumber}`);
+  });
+  it("should return a 400 error for invalid input", async () => {
+    const response = await request(app)
+      .post("/api/block/analyze")
+      .send({});
+
+    expect(response.status).toBe(400);
+    expect(response.body).toHaveProperty("error");
   });
 });
